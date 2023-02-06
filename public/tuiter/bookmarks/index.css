@@ -1,0 +1,129 @@
+.wd-title { 
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 0px;
+}
+
+.wd-handle {
+    font-size: 13px;
+    color:rgb(110, 118, 125);
+    margin: 0px;
+
+}
+
+#bookmark { 
+    padding-right: 16px !important;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wd-bookmark-text {
+    width: 70%;
+
+}
+
+.wd-blue-right-dot { 
+    font-size: 20px;
+    color: rgb(29, 161, 242);
+    text-decoration: none;
+    vertical-align: middle;
+}
+
+
+.wd-tweet-header { 
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0px;
+}
+.wd-author-section {
+    padding: auto;
+}
+.wd-tweet-author {
+    font-size: 15px;
+    color: white;
+    font-weight: bold;
+    padding-right: 5px;
+}
+
+.wd-author-propic {
+    border-radius: 100%;
+    width: 48x;
+    height: 48px;
+    padding-right: 12px;
+}
+
+.wd-tweet-body { 
+    max-width: 506px;
+    color: whitesmoke;
+    font-size: 15px;
+    padding-bottom: 12px;
+    padding-left: 60px;
+}
+
+.wd-article {
+    border: 1px solid rgb(47, 51, 54);
+    border-radius: 10px;
+    width: 504px;
+    margin-left: 60px;
+}
+
+.wd-article-image {
+    width: 504px;
+    height: 264px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom: 1px solid rgb(47, 51, 54);
+}
+
+.wd-article-title { 
+    padding: 12px;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+    margin: 0px;
+}
+
+.wd-article-text { 
+    padding: 12px;
+    margin: 0;
+    font-size: 15px;
+    color: rgb(110, 118, 125);
+}
+
+.wd-tweet-footer {
+    padding: 0;
+    margin: 12px 0;
+    font-size: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.wd-link-icon {
+    align-items: center;
+}
+
+.wd-link {
+    color: rgb(110, 118, 125);
+    text-decoration: none;
+
+
+}
+.wd-link-heart {
+    color: rgb(255, 56, 85);
+    text-decoration: none;
+}
+.wd-icon {
+    padding-right: 12px;
+    width: 5px;
+    color: transparent;  text-shadow: 0 0 0 rgb(110, 118, 125);
+}
+.wd-icon-heart{
+    padding-right: 12px;
+    width: 5px;
+    color: transparent;  text-shadow: 0 0 0 rgb(255, 56, 85);
+}
+
+
