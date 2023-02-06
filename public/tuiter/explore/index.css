@@ -40,8 +40,20 @@ input {
     width: 10%;
     margin-left: 12px;
     color: white;
-    text-decoration: none;
 
+}
+
+.wd-gear {
+    text-decoration: none;
+    color: rgb(29, 161, 242);
+}
+.wd-gear:visited{
+    text-decoration: none;
+    color: rgb(29, 161, 242);
+}
+.wd-gear:hover{
+    text-decoration: none;
+    color: white;
 }
 
 #wd-search-bar-left {
@@ -68,6 +80,12 @@ input {
     
 .wd-list-link {
     color: rgb(110, 118, 125);
+    font-weight: bold;
+    text-decoration: none;
+
+}
+.wd-list-link:hover {
+    color: whitesmoke;
     font-weight: bold;
     text-decoration: none;
 
@@ -104,17 +122,22 @@ input {
     padding: 16px;
 }
 
+.wd-trending#Starship {
+    margin-bottom: 16px;
+}
+
 .wd-topic-subtitle {
     font-size: 13px;
     color:rgb(110, 118, 125);
     margin: 0px;
+    padding: 0px;
+    
+
 }
 
 .wd-tweet-header-right-dot {
     font-size: 20px;
     color: rgb(110, 118, 125);
-    /* padding-left: 10px;
-    padding-right: 10px; */
     text-decoration: none;
     float:right;
     vertical-align: top;
@@ -129,6 +152,47 @@ input {
     margin-bottom: 4px;
 
 }
+.wd-image-section {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.wd-topic-text {
+    width: 80%;
+
+}
+
+.wd-author-section{
+    display: flex;
+    align-items: center;
+    padding-bottom: 3px;
+
+}
+
+.wd-author-logo {
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    padding-right: 3px;
+}
+.wd-topic-image { 
+    width: 100px;
+    height: 100px;
+    vertical-align: middle;
+    border-radius: 20%;
+    padding-right: 16px;
+
+}
+
+.wd-topic-author {
+    font-size: 15px;
+    font-weight: bold;
+    color: whitesmoke;
+    margin: 0px;
+    padding-right: 5px;
+}
+
 
 
 

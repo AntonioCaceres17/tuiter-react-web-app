@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- saved from url=(0029)http://127.0.0.1:5500/public/ -->
+<html lang="en"><div id="twoseven-scripts" data-info="Scripts added by TwoSeven extension" style="display: none !important; position: static !important; top: 0px !important; left: 0px !important; width: 0px !important; height: 0px !important;"><script type="text/javascript" id="__tmpScript-862127659" data-added-by-two-seven="1">(function() {
+        window.twoseven = {};
+      })();</script><script type="text/javascript" id="__tmpScript-952675463" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForDOMNode = async function t(e,t=document){e=e||{};const{type:n,value:o}=e;if(!n||!o)throw new Error("Must specify identifier");let s=o;switch(n){case"tag":s=o.toUpperCase()}if("check"!==n){const e=await i({type:"selector",value:s},[],t);if(e)return new Promise(t=>t(e))}async function i({type:e,value:t},n,o){let s;switch(e){case"tag":s=n.find(e=>e.tagName===t);break;case"selector":s=o.querySelector(t);break;case"check":for(const e of n){if(await t(e))return e}}return s}return new Promise((e,o)=>{const a=new MutationObserver(async o=>{for(const r of o)if("childList"===r.type){const o=Array.from(r.addedNodes),w=await i({type:n,value:s},o,t);if(w)return a.disconnect(),e(w)}});a.observe(t,{childList:!0,subtree:!0})})};
+      })();</script><script type="text/javascript" id="__tmpScript-553405956" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.reportError = function n(e,t,n){"string"==typeof(n=n||{})&&(n={message:n});const{message:o,stack:s}=t;Object.assign(n,{tag:e,error:{message:o,stack:s}}),window.tsExtGetPostToParent()({name:name,tag:e,action:"report-error",json:n}),console.error(JSON.stringify(n.error))}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-295634414" data-added-by-two-seven="1">(function() {
+        
+    window.twosevenHmsToSecondsOnly = function(str) {
+        var p = str.split(':'),
+            s = 0, m = 1;
+
+        while (p.length > 0) {
+            s += m * parseInt(p.pop(), 10);
+            m *= 60;
+        }
+
+        return s;
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-810641531" data-added-by-two-seven="1">(function() {
+        window.twosevenExtLog = function(e,o,c){o||(o=e,e=void 0);let n=c||"black";if(c)switch(c){case"success":n="Green";break;case"info":n="DodgerBlue";break;case"error":n="Red";break;case"warning":n="Orange";break;default:n=c}e?console.log("%c"+e+": "+o,`color:${n}`):console.log("%c"+o,`color:${n}`)};
+      })();</script><script type="text/javascript" id="__tmpScript-11092606" data-added-by-two-seven="1">(function() {
+        
+    document.twosevenGET = function(url, callback) {
+      var xmlhttp = new XMLHttpRequest();
+
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
+          if (xmlhttp.status == 200) {
+            callback(null, xmlhttp.responseText);
+          } else {
+            callback('something else other than 200 was returned', '');
+          }
+        }
+      };
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+    };
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-104915838" data-added-by-two-seven="1">(function() {
+        
+    window.triggerEvent = function(e,t,n,o=!1){let s;o?(n&&"string"!=typeof n&&(n=JSON.stringify(n)),s=n):s={data:n},window.twosevenScriptsDiv&&n&&"object"==typeof n&&(console.warn(`WARNING: Attempting to send an object via event.detail from CS->Page does not work on Firefox: ${JSON.stringify(n)}`),console.error((new Error).stack));var i=new CustomEvent(t,{bubbles:!0,composed:!0,detail:s});e.dispatchEvent(i)}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-555728743" data-added-by-two-seven="1">(function() {
+        window.twoseven.postTo = async function o(e,t,n=!1){let o;return t.name=t.name||name,o=n?new Promise(e=>{const n=`ack-${t.action}-${1e9*Math.random()|0}`;t.ack={event:n};window.debug&&["play","pause","currentTime"].some(e=>t.action.includes(e)),window.addEventListener("message",function t({data:o={}}){o.action===n&&(window.removeEventListener("message",t),e(o.json))})}):new Promise(e=>e()),e.postMessage(t,"*"),o};
+      })();</script><script type="text/javascript" id="__tmpScript-15345286" data-added-by-two-seven="1">(function() {
+        window.tsExtGetPostTo = function s(){return window.twoseven&&window.twoseven.postTo||window.postTo};
+      })();</script><script type="text/javascript" id="__tmpScript-747791909" data-added-by-two-seven="1">(function() {
+        window.tsExtGetPostToParent = function i(){return window.twoseven&&window.twoseven.postToParent||window.postToParent};
+      })();</script><script type="text/javascript" id="__tmpScript-550359390" data-added-by-two-seven="1">(function() {
+        window.twoseven.postResponse = async function a(e,t){const{source:n,data:{ack:{event:o}}}=e;window.tsExtGetPostTo()(n,{action:o,json:t})};
+      })();</script><script type="text/javascript" id="__tmpScript-877899506" data-added-by-two-seven="1">(function() {
+        window.twoseven.postToParent = async function r(e,t=!1){return window.tsExtGetPostTo()(window.parent,e,t)};
+      })();</script><script type="text/javascript" id="__tmpScript-156955035" data-added-by-two-seven="1">(function() {
+        window.twoseven.postToTop = async function w(e,t=!1){return window.tsExtGetPostTo()(window.top,e,t)};
+      })();</script><script type="text/javascript" id="__tmpScript-177209484" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.getFromStorage = e=>new Promise((t,n)=>{const o="get-from-storage-"+(1e9*Math.random()|0);window.addEventListener(o,e=>{window.removeEventListener(o,this);const{detail:{data:{value:n}}}=e;t(n)}),triggerEvent(window,"get-from-storage",{key:e,evt:o})})
+    window.twoseven.saveToStorage = e=>{triggerEvent(window,"save-to-storage",e)}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-630652504" data-added-by-two-seven="1">(function() {
+        
+    window.attachHistoryListeners = function d(){var e=history.pushState;history.pushState=function(t,n,o){return"function"==typeof history.onpushstate&&history.onpushstate({state:t}),triggerEvent(window,"pushstate",{uri:o}),e.apply(history,arguments)};var t=history.replaceState;history.replaceState=function(e){return"function"==typeof history.onreplacestate&&history.onreplacestate({state:e}),t.apply(history,arguments)}}
+    window.attachHistoryListeners()
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-295877311" data-added-by-two-seven="1">(function() {
+        window.twoseven.once = function c(e,t,n){e.addEventListener(t,function o(s){e.removeEventListener(t,o),n(s)})};
+      })();</script><script type="text/javascript" id="__tmpScript-370293343" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.isOnTwoSevenTab = async () => {
+      const result = await window.twoseven.postTo(window, { action: 'is-on-twoseven-tab' }, true)
+      return result
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-190240758" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.isPaused = async () => {
+      const result = await window.twoseven.postTo(window, { action: 'twoseven:pause-state' }, true)
+      return result
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-84876863" data-added-by-two-seven="1">(function() {
+        window.twoseven = {};
+      })();</script><script type="text/javascript" id="__tmpScript-929409907" data-added-by-two-seven="1">(function() {
+        window.twoseven.waitForDOMNode = async function t(e,t=document){e=e||{};const{type:n,value:o}=e;if(!n||!o)throw new Error("Must specify identifier");let s=o;switch(n){case"tag":s=o.toUpperCase()}if("check"!==n){const e=await i({type:"selector",value:s},[],t);if(e)return new Promise(t=>t(e))}async function i({type:e,value:t},n,o){let s;switch(e){case"tag":s=n.find(e=>e.tagName===t);break;case"selector":s=o.querySelector(t);break;case"check":for(const e of n){if(await t(e))return e}}return s}return new Promise((e,o)=>{const a=new MutationObserver(async o=>{for(const r of o)if("childList"===r.type){const o=Array.from(r.addedNodes),w=await i({type:n,value:s},o,t);if(w)return a.disconnect(),e(w)}});a.observe(t,{childList:!0,subtree:!0})})};
+      })();</script><script type="text/javascript" id="__tmpScript-573697974" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.reportError = function n(e,t,n){"string"==typeof(n=n||{})&&(n={message:n});const{message:o,stack:s}=t;Object.assign(n,{tag:e,error:{message:o,stack:s}}),window.tsExtGetPostToParent()({name:name,tag:e,action:"report-error",json:n}),console.error(JSON.stringify(n.error))}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-613347993" data-added-by-two-seven="1">(function() {
+        
+    window.twosevenHmsToSecondsOnly = function(str) {
+        var p = str.split(':'),
+            s = 0, m = 1;
+
+        while (p.length > 0) {
+            s += m * parseInt(p.pop(), 10);
+            m *= 60;
+        }
+
+        return s;
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-288488063" data-added-by-two-seven="1">(function() {
+        window.twosevenExtLog = function(e,o,c){o||(o=e,e=void 0);let n=c||"black";if(c)switch(c){case"success":n="Green";break;case"info":n="DodgerBlue";break;case"error":n="Red";break;case"warning":n="Orange";break;default:n=c}e?console.log("%c"+e+": "+o,`color:${n}`):console.log("%c"+o,`color:${n}`)};
+      })();</script><script type="text/javascript" id="__tmpScript-372192686" data-added-by-two-seven="1">(function() {
+        
+    document.twosevenGET = function(url, callback) {
+      var xmlhttp = new XMLHttpRequest();
+
+      xmlhttp.onreadystatechange = function() {
+        if (xmlhttp.readyState == XMLHttpRequest.DONE ) {
+          if (xmlhttp.status == 200) {
+            callback(null, xmlhttp.responseText);
+          } else {
+            callback('something else other than 200 was returned', '');
+          }
+        }
+      };
+      xmlhttp.open("GET", url, true);
+      xmlhttp.send();
+    };
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-644852841" data-added-by-two-seven="1">(function() {
+        
+    window.triggerEvent = function(e,t,n,o=!1){let s;o?(n&&"string"!=typeof n&&(n=JSON.stringify(n)),s=n):s={data:n},window.twosevenScriptsDiv&&n&&"object"==typeof n&&(console.warn(`WARNING: Attempting to send an object via event.detail from CS->Page does not work on Firefox: ${JSON.stringify(n)}`),console.error((new Error).stack));var i=new CustomEvent(t,{bubbles:!0,composed:!0,detail:s});e.dispatchEvent(i)}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-304687108" data-added-by-two-seven="1">(function() {
+        window.twoseven.postTo = async function o(e,t,n=!1){let o;return t.name=t.name||name,o=n?new Promise(e=>{const n=`ack-${t.action}-${1e9*Math.random()|0}`;t.ack={event:n};window.debug&&["play","pause","currentTime"].some(e=>t.action.includes(e)),window.addEventListener("message",function t({data:o={}}){o.action===n&&(window.removeEventListener("message",t),e(o.json))})}):new Promise(e=>e()),e.postMessage(t,"*"),o};
+      })();</script><script type="text/javascript" id="__tmpScript-357089007" data-added-by-two-seven="1">(function() {
+        window.tsExtGetPostTo = function s(){return window.twoseven&&window.twoseven.postTo||window.postTo};
+      })();</script><script type="text/javascript" id="__tmpScript-297484320" data-added-by-two-seven="1">(function() {
+        window.tsExtGetPostToParent = function i(){return window.twoseven&&window.twoseven.postToParent||window.postToParent};
+      })();</script><script type="text/javascript" id="__tmpScript-292265697" data-added-by-two-seven="1">(function() {
+        window.twoseven.postResponse = async function a(e,t){const{source:n,data:{ack:{event:o}}}=e;window.tsExtGetPostTo()(n,{action:o,json:t})};
+      })();</script><script type="text/javascript" id="__tmpScript-115225804" data-added-by-two-seven="1">(function() {
+        window.twoseven.postToParent = async function r(e,t=!1){return window.tsExtGetPostTo()(window.parent,e,t)};
+      })();</script><script type="text/javascript" id="__tmpScript-723489395" data-added-by-two-seven="1">(function() {
+        window.twoseven.postToTop = async function w(e,t=!1){return window.tsExtGetPostTo()(window.top,e,t)};
+      })();</script><script type="text/javascript" id="__tmpScript-216500231" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.getFromStorage = e=>new Promise((t,n)=>{const o="get-from-storage-"+(1e9*Math.random()|0);window.addEventListener(o,e=>{window.removeEventListener(o,this);const{detail:{data:{value:n}}}=e;t(n)}),triggerEvent(window,"get-from-storage",{key:e,evt:o})})
+    window.twoseven.saveToStorage = e=>{triggerEvent(window,"save-to-storage",e)}
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-762549197" data-added-by-two-seven="1">(function() {
+        
+    window.attachHistoryListeners = function d(){var e=history.pushState;history.pushState=function(t,n,o){return"function"==typeof history.onpushstate&&history.onpushstate({state:t}),triggerEvent(window,"pushstate",{uri:o}),e.apply(history,arguments)};var t=history.replaceState;history.replaceState=function(e){return"function"==typeof history.onreplacestate&&history.onreplacestate({state:e}),t.apply(history,arguments)}}
+    window.attachHistoryListeners()
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-49823161" data-added-by-two-seven="1">(function() {
+        window.twoseven.once = function c(e,t,n){e.addEventListener(t,function o(s){e.removeEventListener(t,o),n(s)})};
+      })();</script><script type="text/javascript" id="__tmpScript-226477499" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.isOnTwoSevenTab = async () => {
+      const result = await window.twoseven.postTo(window, { action: 'is-on-twoseven-tab' }, true)
+      return result
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-896374918" data-added-by-two-seven="1">(function() {
+        
+    window.twoseven.isPaused = async () => {
+      const result = await window.twoseven.postTo(window, { action: 'twoseven:pause-state' }, true)
+      return result
+    }
+  ;
+      })();</script><script type="text/javascript" id="__tmpScript-254848792" data-added-by-two-seven="1">(function() {
+        
+      const modal = document.querySelector('.twoseven-ext-tab-media-modal')
+      const modalCloseBtn = modal.querySelector('.close')
+      function closeModal () {
+        modal.style.display = 'none'
+        const frame = document.querySelector('#twoseven-ext-tab-media-iframe').contentWindow
+        frame.postMessage({
+          __evt_name: 'modal-hide'
+        }, '*')
+      }
+      modalCloseBtn.onclick = closeModal
+
+      window.onmessage = function (e) {
+        if (e.data.__evt_name === 'modal-hide') {
+          closeModal()
+        }
+      }
+
+      window.twoseven.closeTabMediaModal = closeModal
+
+      window.onclick = function (e) {
+        if (e.target.id === 'twoseven-ext-tab-media-modal' && modal.style.display === 'block') {
+            closeModal()
+        }
+      }
+    ;
+      })();</script></div><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://127.0.0.1:5500/public/%PUBLIC_URL%/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://127.0.0.1:5500/public/%PUBLIC_URL%/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://127.0.0.1:5500/public/%PUBLIC_URL%/manifest.json">
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <link href="chrome-extension://cjdnfmjmdligcpfcekfmenlhiopehjkd/web_resources/modal/modal.css" rel="stylesheet" id="__tmpStyle"></head>
+  <body data-new-gr-c-s-check-loaded="14.1094.0" data-gr-ext-installed="" data-gr-ext-disabled="forever">
+    <h1>Web Dev Assignments</h1>
+    <ul>
+      <li><a href="http://127.0.0.1:5500/public/labs/a2/index.html">Assignment 2 Labs</a></li>
+      <li><a href="http://127.0.0.1:5500/public/labs/a3/index.html">Assignment 3 Labs</a></li>
+      <li><a href="http://127.0.0.1:5500/public/tuiter/navigation.html">Tuiter</a></li>
+    </ul>
+  <!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+<div>
+    <div id="twoseven-ext-tab-media-modal" class="twoseven-ext-tab-media-modal" style="display: none;">
+      <!-- Modal content -->
+      <div class="twoseven-ext-tab-media-modal-content">
+        <div class="iframe-container" style="height: 100%; width: 100%;">
+          <span class="close">×</span>
+        </div>
+      </div>
+    </div></div></body></html>
