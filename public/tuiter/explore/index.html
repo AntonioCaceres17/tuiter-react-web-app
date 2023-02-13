@@ -11,7 +11,8 @@ rel="stylesheet"/>
     <!-- Recreate this entire html asnd index.css to use boostrap and font awesome-->    
 
 <body > 
-    <div class="container pt-2 pb-2 row"> 
+    <div class="container pt-3"> 
+        <div class="row">
     <div class="col-xl-2 col-lg-1 col-md-2 col-sm-2 col-3"> 
         <ul class="list-group rounded">
             <!-- Create a list of icons sidebar-->
@@ -99,7 +100,7 @@ rel="stylesheet"/>
 
     <header>
         <div class="row align-items-center">
-            <div class="col-10">
+            <div class="col-11">
                 <div class="input-group border rounded-pill">
                     <span class="input-group-text  bg-transparent border-0">
                         <i class="fas fa-search text-muted"></i> 
@@ -108,7 +109,7 @@ rel="stylesheet"/>
             </div>
         </div>
             <div class="col-1 mt-1">
-                <i class="fas fa-cog fa-lg text-blue"></i>
+                <i class="fas fa-cog fa-lg text-primary"></i>
             </div>
         </div>
         
@@ -117,10 +118,10 @@ rel="stylesheet"/>
             <ul class="list-inline"></ul>
                 <li class="list-inline-item">
                     <a class="nav-link active" href="#">For you</a>
-                <li class="list-inline-item"><a class="nav-link text-secondary" href="">COVID-19</a></li>
-                <li class="list-inline-item"><a class="nav-link text-secondary" href="">News</a></li>
-                <li class="list-inline-item"><a class="nav-link text-secondary d-sm-block " href="">Sports</a></li>
-                <li class="list-inline-item "><a class="nav-link text-secondary d-none d-md-block" href="">Entertainment</a></li>
+                <li class="list-inline-item"><a class="nav-link text-primary" href="">Trending</a></li>
+                <li class="list-inline-item"><a class="nav-link text-primary" href="">News</a></li>
+                <li class="list-inline-item"><a class="nav-link text-primary d-sm-block " href="">Sports</a></li>
+                <li class="list-inline-item "><a class="nav-link text-primary d-none d-md-block" href="">Entertainment</a></li>
         </div>
         <!-- starship image-->
         <div class="position-relative">
@@ -198,7 +199,8 @@ rel="stylesheet"/>
     </ul>
     </div>
     <!-- Right sidebar: Who to follow, hides on medium and below-->
-    <div class="col lg-3 col-xl-3">
+    <div class="col lg-3 col-xl-4">
+        <div class="d-none d-lg-block">
         <ul class="list-group rounded"> 
             <li class="list-group-item"> 
                 <div class="row">
@@ -213,13 +215,13 @@ rel="stylesheet"/>
                     <div class="col-2">
                         <img height=45px width=45px class="rounded-circle" src="/public/imgs/java-logo.png" alt="Elon Musk">
                     </div>
-                    <div class="col-6">
+                    <div class="col-8">
                         <div class="fw-bolder">Java <i class="fas fa-check-circle"> </i>
                         </div>
                         <div class="text-secondary">@Java</div>
                     </div>
                     <div class="col-2">
-                        <button class="btn btn-primary rounded-pill">Follow</button>
+                        <button type="button" class="btn btn-primary rounded-pill btn-md float-end">Follow</button>
                 </div>
             </li>
             <li class="list-group-item">
@@ -227,13 +229,13 @@ rel="stylesheet"/>
                     <div class="col-2">
                         <img height=45px width=45px class="rounded-circle" src="/public/imgs/rel-space.jpeg" alt="Elon Musk">
                     </div>
-                    <div class="col-7">
+                    <div class="col-8">
                         <div class="fw-bolder">Relativity Space<i class="fas fa-check-circle"> </i>
                         </div>
                         <div class="text-secondary">@relativityspace</div>
                     </div>
-                    <div class="col-3 pt-0">
-                        <button class="btn btn-primary rounded-pill float-end">Follow</button>
+                    <div class="col-2">
+                        <button type="button" class="btn btn-primary rounded-pill btn-md float-end">Follow</button>
                 </div>
             </li>
             <li class="list-group-item">
@@ -241,13 +243,13 @@ rel="stylesheet"/>
                     <div class="col-2">
                         <img height=45px width=45px class="rounded-circle" src="/public/imgs/virgin.svg" alt="Elon Musk">
                     </div>
-                    <div class="col-6">
+                    <div class="col-8">
                         <div class="fw-bolder">NASA<i class="fas fa-check-circle"> </i>
                         </div>
                         <div class="text-secondary">@NASA</div>
                     </div>
-                    <div class="col-1 pb-1">
-                        <button class="btn btn-primary rounded-pill">Follow</button>
+                    <div class="col-2">
+                        <button class="btn btn-primary rounded-pill btn-md float-end">Follow</button>
                 </div>
             </li>
             <li class="list-group-item">
@@ -255,13 +257,13 @@ rel="stylesheet"/>
                     <div class="col-2">
                         <img height=45px width=45px class="rounded-circle" src="/public/imgs/nasa.webp" alt="Elon Musk">
                     </div>
-                    <div class="col-7">
+                    <div class="col-8">
                         <div class="fw-bolder">Virgin Galatic<i class="fas fa-check-circle"> </i>
                         </div>
                         <div class="text-secondary">@virgingalactic</div>
                     </div>
-                    <div class="col-3">
-                        <button class="btn btn-primary rounded-pill float-end">Follow</button>
+                    <div class="col-2">
+                        <button class="btn btn-primary rounded-pill btn-md float-end">Follow</button>
                 </div>
             </li>
             <li class="list-group-item">
@@ -269,19 +271,21 @@ rel="stylesheet"/>
                     <div class="col-2">
                         <img height=45px width=45px class="rounded-circle" src="/public/imgs/tesla.png" alt="Elon Musk">
                     </div>
-                    <div class="col-6">
+                    <div class="col-8">
                         <div class="fw-bolder">Tesla <i class="fas fa-check-circle"> </i>
                         </div>
                         <div class="text-secondary">@tesla</div>
                     </div>
                     <div class="col-2">
-                        <button class="btn btn-primary rounded-pill">Follow</button>
+                        <button class="btn btn-primary rounded-pill btn-md float-end">Follow</button>
                 </div>
             </li>
         </ul>
 
     </div>
+    </div>
 
+</div>
 </div>
     </body>
 </html>
