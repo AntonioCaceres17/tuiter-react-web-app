@@ -14,7 +14,7 @@ const ExploreComponent = () => {
             </div>
     
             <div class="col-1 mt-1">
-                <i class="fas fa-cog fa-lg"></i>
+                <i class="fas fa-cog fa-lg text-primary"></i>
             </div>
         </div>
            
