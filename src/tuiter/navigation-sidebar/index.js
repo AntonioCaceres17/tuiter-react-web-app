@@ -1,4 +1,4 @@
-import { faBell, faBookmark, faEnvelope, faHashtag, faHome, faInfoCircle, faList, faUser } from "@fortawesome/free-solid-svg-icons";
+import { faBell, faBookmark, faEnvelope, faHashtag, faHome, faEllipsisH, faList, faUser } from "@fortawesome/free-solid-svg-icons";
 import { faTwitter } from '@fortawesome/free-brands-svg-icons';
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
@@ -52,7 +52,7 @@ const NavigationSidebar = (
         </a>
         <a className={`list-group-item
                     ${active === 'more' ? 'active' : ''}`}>
-          <FontAwesomeIcon icon={faInfoCircle} />
+          <FontAwesomeIcon icon={faEllipsisH} />
           <span className="d-none d-xl-inline"> More</span>
         </a>
       </div>

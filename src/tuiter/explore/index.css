@@ -23,4 +23,17 @@
  .wd-bottom-4 {
     bottom: 4px;
  }
+
+ .wd-search{
+   border-radius: 500px;
+   border: 1px solid lightgray;
+   padding: 10px;
+   padding-left: 12px;
+ }
+
+ .wd-input {
+   border: none;
+   padding-left: 5px;
+   width: 85%;
+ }
  
