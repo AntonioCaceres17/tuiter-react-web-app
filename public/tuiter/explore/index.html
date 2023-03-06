@@ -1,23 +1,291 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
-  rel="stylesheet"/>  
-  <link href="../vendors/bootswatch/bootstrap.min.css" rel="stylesheet"/> 
+  <title>Explore Screen</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" 
+  rel="stylesheet"/>   
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" 
 rel="stylesheet"/> 
-
-   <link href="index.css" rel="stylesheet"/>
-   <script src="https://code.jquery.com/jquery-3.6.1.min.js"
-           integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ="
-           crossorigin="anonymous"></script>
-   <meta charset="UTF-8">
-   <title>Explore screen</title>
 </head>
-<body>
 
-<div class="container" id="wd-explore"></div>
-<script src="index.js" type="module"></script>
+    <!-- Recreate this entire html asnd index.css to use boostrap and font awesome-->    
 
-</body>
+<body > 
+    <div class="container pt-3"> 
+        <div class="row">
+    <div class="col-xl-2 col-lg-1 col-md-2 col-sm-2 col-3"> 
+        <ul class="list-group rounded">
+            <!-- Create a list of icons sidebar-->
+            <li class="list-group-item">
+                <div class="row"> 
+                    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                    <i class="fab fa-twitter text-blue"></i>
+                    </div>
+                </div>
+            </li>
+             <li class="list-group-item">
+                <div class="row"> 
+                    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                    <i class="fas fa-home text-blue"></i>
+                    </div>
+                    <div class="col-1 d-none d-xl-block ">Home</div>
+                </div>
+            </li>
+            <li class="list-group-item active">
+                <div class="row"> 
+                    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                    <i class="fas fa-hashtag text-blue"></i>
+                    </div>
+                    <div class="col-1 d-none d-xl-block ">Explore</div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row"> 
+                    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                    <i class="fas fa-bell text-blue"></i>
+                    </div>
+                    <div class="col-1 d-none d-xl-block ">Notifcations</div>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row"> 
+                    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                    <i class="fas fa-envelope text-blue"></i>
+                    </div>
+                    <div class="col-1 d-none d-xl-block ">Messages</div>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="row"> 
+                    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                    <i class="fas fa-bookmark text-blue"></i>
+                    </div>
+                    <div class="col-1 d-none d-xl-block ">Bookmarks</div>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="row"> 
+                    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                    <i class="fas fa-list text-blue"></i>
+                    </div>
+                    <div class="col-1 d-none d-xl-block ">Lists</div>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="row"> 
+                    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                    <i class="fas fa-user text-blue"></i>
+                    </div>
+                    <div class="col-1 d-none d-xl-block">Profile</div>
+                </div>
+            </li>
+
+            <li class="list-group-item">
+                <div class="row"> 
+                    <div class="col-sm-1 col-md-1 col-lg-1 col-xl-1">
+                    <i class="fas fa-ellipsis-h text-blue"></i>
+                    </div>
+                    <div class="col-1 d-none d-xl-block ">More</div>
+                </div>
+            </li>
+        </ul>
+        <button type="button" class="btn btn-primary w-100 mt-2 rounded-pill">Tuit</button>
+    </div>
+       
+    <div class="col-xxl-6 col-xl-6 col-lg-7 col-md-10 col-sm-10 col-8">
+        <!-- Create a header with a input field and a gear that references explore-settings-->
+
+    <header>
+        <div class="row align-items-center">
+            <div class="col-11">
+                <div class="input-group border rounded-pill">
+                    <span class="input-group-text  bg-transparent border-0">
+                        <i class="fas fa-search text-muted"></i> 
+                    </span> 
+                <input type="text" placeholder="Search Tuiter" class="border-0 form-control bg-transparent rounded-pill ps-1">
+            </div>
+        </div>
+            <div class="col-1 mt-1">
+                <i class="fas fa-cog fa-lg text-primary"></i>
+            </div>
+        </div>
+        
+        <!-- Create a div with a list of links to other pages -->
+        <div class="nav nav-tabs mt-2 pb-2">
+            <ul class="list-inline"></ul>
+                <li class="list-inline-item">
+                    <a class="nav-link active" href="#">For you</a>
+                <li class="list-inline-item"><a class="nav-link text-primary" href="">Trending</a></li>
+                <li class="list-inline-item"><a class="nav-link text-primary" href="">News</a></li>
+                <li class="list-inline-item"><a class="nav-link text-primary d-sm-block " href="">Sports</a></li>
+                <li class="list-inline-item "><a class="nav-link text-primary d-none d-md-block" href="">Entertainment</a></li>
+        </div>
+        <!-- starship image-->
+        <div class="position-relative">
+            <img class="w-100 rounded" src="/imgs/starship.webp" alt="Starship">
+            <h2 class="position-absolute bottom-0 left-0 text-white"> SpaceX's Starship</h2>
+        </div>
+    </header>
+    <!-- Create a div with suggested and trending topics -->
+    <ul class="list-group"> 
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-8"> 
+                    <div class="text-secondary">Web Development</div>
+                    <span class="fw-bolder pt-1 pb-1">
+                        ReactJS 
+                        <i class="fas fa-check-circle"> </i>
+                    </span>
+                    <span class="text-secondary"> - 2h</span>     
+                    <div class="fw-bolder"> 
+                        React.js is a compenent based front end library that is used to build Single Page Applications or SPAs
+                    </div>     
+                </div>
+                <div class="col-4">
+                    <img class="w-100 rounded" src="/imgs/react.jpeg" alt="ReactJS">
+            </div>
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-8"> 
+                    <span class="fw-bolder pt-1 pb-1">
+                        JavaScript  
+                        <i class="fas fa-check-circle"> </i>
+                    </span>
+                    <span class="text-secondary"> - 2h</span>     
+                    <div class="fw-bolder"> JavaScript is programming language that can run on browsers as well as desktops </div>
+                    <div class="text-secondary">123K Tweets</div>
+     
+                </div>
+                <div class="col-4">
+                    <img class="w-100 rounded" src="/imgs/js-logo.png" alt="JS">
+            </div>g
+        </li>
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-8"> 
+                    <div class="text-secondary">Web Development</div>
+                    <span class="fw-bolder pt-1 pb-1">
+                        JQuery  
+                    </span>
+                    <span class="text-secondary"> - 2h</span>     
+                    <div class="text-secondary">123K Tweets</div>
+                </div>
+                <div class="col-4">
+                    <img class="w-100 rounded" src="/imgs/jquery.png" alt="JQuery">
+            </div>
+        </li>
+
+        <li class="list-group-item">
+            <div class="row">
+                <div class="col-8"> 
+                    <div class="text-secondary">Web Development</div>
+                    <span class="fw-bolder pt-1 pb-1">
+                        NodeJS  
+                        <i class="fas fa-check-circle"> </i>
+                    </span>
+                    <span class="text-secondary"> - 2h</span>     
+                    <div class="text-secondary">123K Tweets</div>
+     
+                </div>
+                <div class="col-4">
+                    <img class="w-100 rounded" src="/imgs/node-js.webp" alt="NODE-JS">
+            </div>
+        </li>
+
+    </ul>
+    </div>
+    <!-- Right sidebar: Who to follow, hides on medium and below-->
+    <div class="col lg-3 col-xl-4">
+        <div class="d-none d-lg-block">
+        <ul class="list-group rounded"> 
+            <li class="list-group-item"> 
+                <div class="row">
+                    <div class="col-12">
+                        <div class="fw-bolder">Who to follow</div>
+                    </div>
+                </div>
+
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-2">
+                        <img height=45px width=45px class="rounded-circle" src="/imgs/java-logo.png" alt="Elon Musk">
+                    </div>
+                    <div class="col-8">
+                        <div class="fw-bolder">Java <i class="fas fa-check-circle"> </i>
+                        </div>
+                        <div class="text-secondary">@Java</div>
+                    </div>
+                    <div class="col-2">
+                        <button type="button" class="btn btn-primary rounded-pill btn-md float-end">Follow</button>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-2">
+                        <img height=45px width=45px class="rounded-circle" src="/imgs/rel-space.jpeg" alt="Elon Musk">
+                    </div>
+                    <div class="col-8">
+                        <div class="fw-bolder">Relativity Space<i class="fas fa-check-circle"> </i>
+                        </div>
+                        <div class="text-secondary">@relativityspace</div>
+                    </div>
+                    <div class="col-2">
+                        <button type="button" class="btn btn-primary rounded-pill btn-md float-end">Follow</button>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row flex-nowrap">
+                    <div class="col-2">
+                        <img height=45px width=45px class="rounded-circle" src="/imgs/virgin.svg" alt="Elon Musk">
+                    </div>
+                    <div class="col-8">
+                        <div class="fw-bolder">NASA<i class="fas fa-check-circle"> </i>
+                        </div>
+                        <div class="text-secondary">@NASA</div>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-primary rounded-pill btn-md float-end">Follow</button>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-2">
+                        <img height=45px width=45px class="rounded-circle" src="/imgs/nasa.webp" alt="Elon Musk">
+                    </div>
+                    <div class="col-8">
+                        <div class="fw-bolder">Virgin Galatic<i class="fas fa-check-circle"> </i>
+                        </div>
+                        <div class="text-secondary">@virgingalactic</div>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-primary rounded-pill btn-md float-end">Follow</button>
+                </div>
+            </li>
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-2">
+                        <img height=45px width=45px class="rounded-circle" src="/imgs/tesla.png" alt="Elon Musk">
+                    </div>
+                    <div class="col-8">
+                        <div class="fw-bolder">Tesla <i class="fas fa-check-circle"> </i>
+                        </div>
+                        <div class="text-secondary">@tesla</div>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn btn-primary rounded-pill btn-md float-end">Follow</button>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+    </div>
+
+</div>
+</div>
+    </body>
 </html>
