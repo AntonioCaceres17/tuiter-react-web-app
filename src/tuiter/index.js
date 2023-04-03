@@ -10,7 +10,8 @@ import whoReducer from "./reducers/who-reducer";
 import { Routes, Route } from "react-router-dom";
 
 const store = configureStore(
-  {reducer: {who: whoReducer, tuits: tuitsReducer}});
+  {reducer: {who: whoReducer, 
+    tuitsData: tuitsReducer}});
 
 
 function Tuiter() {

@@ -3,21 +3,19 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCheckCircle } from '@fortawesome/free-solid-svg-icons';
 import TuitStats from "./TuitStats";
 import { useDispatch } from "react-redux";
-import { deleteTuit } from "../tuits/tuits-reducer";
-
-
+import { deleteTuitThunk } from "../../services/tuits-thunks";
 
 const TuitItem = ({tuit}) => {
     const dispatch = useDispatch();
 const deleteTuitHandler = (id) => {
-    dispatch(deleteTuit(id));
+    dispatch(deleteTuitThunk(id));
 }
 
     return(
         <li className="list-group-item">
             <div className="row">
                 <div className="col-1 ps-0">
-                    <img alt="profile" width={50} className="rounded-circle" src={`/images/${tuit.image}`}/>
+                    <img alt="profile" width={50} className="rounded-circle" src={`../imgs/${tuit.image}`}/>
                     </div>
                     <div className="col-10">
                     <i className="bi bi-x-lg float-end"
