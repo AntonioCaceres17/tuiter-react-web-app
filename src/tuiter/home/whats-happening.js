@@ -7,7 +7,17 @@ const WhatsHappening = () => {
  const dispatch = useDispatch();
  const tuitClickHandler = () => {
   const newTuit = {
-    tuit : whatsHappening
+    tuit: whatsHappening,
+    userName: "NASA",
+    time: "1s",
+    image: "../../imgs/nasa.webp",
+    liked: false,
+    disliked: false,
+    replies: 0,
+    retuits: 0,
+    likes: 0,
+    dislikes: 0,
+    handle: "@NASA",
   }
   dispatch(createTuitThunk(newTuit));
    console.log(whatsHappening);
@@ -16,7 +26,7 @@ const WhatsHappening = () => {
  return (
    <div className="row">
      <div className="col-auto">
-       <img src="../imgs/nasa.webp" width={60} />
+       <img src="../../imgs/nasa.webp" width={60} />
      </div>
      <div className="col-10">
        <textarea value={whatsHappening} placeholder="What's happening?"

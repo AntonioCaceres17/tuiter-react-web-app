@@ -14,7 +14,14 @@ const TuitStats  = ({tuitStats}) => {
             dispatch(updateTuitThunk({
             ...tuitStats , likes: tuitStats.likes + 1, liked: true}))
 
-} 
+}
+const  toggleDislikeHandler = () => {
+    tuitStats.disliked? dispatch(updateTuitThunk({
+        ...tuitStats , dislikes: tuitStats.dislikes - 1, disliked: false})) : 
+        dispatch(updateTuitThunk({
+        ...tuitStats , dislikes: tuitStats.dislikes + 1, disliked: true}))
+
+}
     return(
         <div className="row">
             <div className="col-1"> </div>
@@ -33,14 +40,12 @@ const TuitStats  = ({tuitStats}) => {
                     </div>
 
                     <div className='col-2'> 
-                    <i onClick={() => dispatch(updateTuitThunk({
-                        ...tuitStats,
-                        dislikes: tuitStats.dislikes + 1,
-                    }))}
-                    className="bi bi-hand-thumbs-down me-2"
-                    id="likes"></i>{tuitStats.dislikes}
+                    <button onClick={() => toggleDislikeHandler()} className="border-0 bg-transparent">
+                    {tuitStats.disliked ? ( <i className="bi bi-hand-thumbs-down-fill me-2" style={{color: "black"}}></i> ) :
+                    ( <i className="bi bi-hand-thumbs-down me-2"></i> ) }
+                    </button>
+                    {tuitStats.dislikes}
                     </div>
-
                     <div className="col-2"> 
                     <FontAwesomeIcon icon={faShareAlt}/>
                     </div>

@@ -8,6 +8,7 @@
    "tuit": "You want to wake up in the morning and think the future is going to be great - and that's what being a spacefaring civilization is all about. It's about believing in the future and thinking that the future will be better than the past. And I can't think of anything more exciting than going out there and being among the stars.",
     "likes": 1000,
     "retuits": 678,
+    "dislikes" : 30,
     "liked": true,
     "replies": 423
   },
@@ -20,6 +21,7 @@
     "handle": "@tesla",
     "tuit": "Autopilot is a advanced driver assistance system that assists the driver with steering, acceleration, and braking. Autopilot is designed to make the driver's job easier, not to do the driver's job for them.",
     "likes": 999,
+    "dislikes" :  20,
     "retuits": 1000,
     "liked": false,
     "replies": 17
@@ -31,6 +33,7 @@
     "title": "Node.js is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser.",
     "tuit" : "NodeJs is an open-source, cross-platform, JavaScript runtime environment that executes JavaScript code outside of a browser.",
     "likes": 25,
+    "dislikes" :  5,
     "retuits": 40,
     "liked": false,
     "replies": 9,
