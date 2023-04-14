@@ -12,8 +12,6 @@ const ExploreComponent = () => {
         <FontAwesomeIcon icon={faSearch} className="position-relative float-left"/>
         <input placeholder="Search Tuiter" id="search-bar" className="wd-input"/>
         </span>
-        <i className="bi bi-search position-absolute
-            wd-nudge-up"></i>
     </div>
 
     <div className="col-1">
